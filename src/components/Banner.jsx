@@ -4,37 +4,41 @@ import theme from "../theme";
 
 const BannerContainer = styled.div`
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(${(props) => props.image});
+    url(${(props) => props.$image});
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
+  border-radius: 15px;
   background-position: center;
   background-size: cover;
   height: 223px;
-  width: 100%;
   padding: 20px;
-  max-width: 95%;
-  margin: 43px auto;
-
-  @media ${theme.breakpoints.mobile} {
-    margin: 20px auto;
+  margin-bottom: 20px;
+  @media ${theme.breakpoints.smallScreen} {
     height: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 `;
 
 const Title = styled.h2`
   color: #ffff;
-  font-size: clamp(24px, 4vw, 48px);
+  font-size: 48px;
   font-weight: 500;
   box-sizing: border-box;
+  @media ${theme.breakpoints.smallScreen} {
+    font-size: 24px;
+    overflow-wrap: break-word;
+    width: 218px;
+  }
 `;
 
 const Banner = ({ image, title }) => {
   return (
-    <BannerContainer image={image}>
+    <BannerContainer $image={image}>
       <Title>{title}</Title>
     </BannerContainer>
   );

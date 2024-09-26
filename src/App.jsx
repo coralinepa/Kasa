@@ -1,13 +1,16 @@
-import { ThemeProvider } from "styled-components";
-import theme from "./theme";
-import { RouterProvider } from "react-router-dom";
-import router from "./router";
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </>
   );
 }
 

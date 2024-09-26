@@ -11,14 +11,11 @@ const CardLink = styled(Link)`
   cursor: pointer;
   overflow: hidden;
   transition: box-shadow 0.2s ease-in-out;
-  @media ${theme.breakpoints.tablet} {
-    width: 47%;
-  }
 
   @media ${theme.breakpoints.mobile} {
-    height: 200px;
+    height: 255px;
   }
-  @media (max-width: 550px) {
+  @media (max-width: 1100px) {
     width: 100%;
   }
 
@@ -37,7 +34,7 @@ const CardLink = styled(Link)`
     );
   }
   &:hover {
-    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    box-shadow: 0 2px 2px rgb(0, 0, 0);
   }
 `;
 

@@ -1,29 +1,25 @@
 import Card from "./Card";
 import styled from "styled-components";
 import datas from "../data/data";
+import theme from "../theme";
 
-const Main = styled.main`
+const CardList = styled.ul`
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 50px;
   background-color: #f7f7f7;
   padding: 50px;
   border-radius: 25px;
-  width: 95%;
-  margin: 0 auto;
-  @media screen and (max-width: 1230px) {
-    gap: 25px;
-    padding: 25px 15px;
-  }
-  @media screen and (max-width: 550px) {
-    width: 100%;
+  @media ${theme.breakpoints.tablet} {
+    padding: 25px;
+    flex-direction: column;
+    gap: 15px;
   }
 `;
 
 function Gallery() {
   return (
-    <Main>
+    <CardList>
       {datas.map((data) => {
         return (
           <Card
@@ -34,7 +30,7 @@ function Gallery() {
           />
         );
       })}
-    </Main>
+    </CardList>
   );
 }
 

@@ -3,17 +3,16 @@ import styled from "styled-components";
 import Logo from "../assets/images/logo.png";
 import Navbar from "./NavBar";
 
-const HeaderPage = styled.header`
+const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 68px;
-  max-width: 95%;
-  width: 100%;
   margin: 0 auto;
-
-  @media screen and (max-width: 900px) {
-    height: 40px;
-  }
+  padding-top: 40px;
+  max-width: 1240px;
+  width: 100%;
+  padding-bottom: 20px;
 `;
 
 const LogoPage = styled.img`
@@ -26,12 +25,12 @@ const LogoPage = styled.img`
 
 function Header() {
   return (
-    <HeaderPage>
+    <StyledHeader>
       <h1>
         <LogoPage src={Logo} alt="Kasa, location d'appartements" />
       </h1>
       <Navbar />
-    </HeaderPage>
+    </StyledHeader>
   );
 }
 

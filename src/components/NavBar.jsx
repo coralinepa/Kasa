@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import theme from "../theme";
 
 const NavList = styled.ul`
   display: flex;
@@ -7,13 +8,17 @@ const NavList = styled.ul`
   color: ${(props) => props.theme.colors.dark};
   font-size: clamp(12px, 2.5vw, 24px);
 
-  @media screen and (max-width: 700px) {
+  @media ${theme.breakpoints.mobile} {
     gap: 20px;
   }
 `;
 
 const NavListItem = styled.li`
   position: relative;
+
+  @media ${theme.breakpoints.mobile} {
+    text-transform: uppercase;
+  }
 
   a {
     text-decoration: none;
