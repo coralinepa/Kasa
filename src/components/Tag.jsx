@@ -7,7 +7,8 @@ const StyledTag = styled.span`
   border-radius: 10px;
   color: white;
   font-size: 14px;
-  padding: 5px 25px;
+  padding: 5px 15px;
+  margin-right: 10px;
   @media ${theme.breakpoints.mobile} {
     font-size: 10px;
   }

@@ -10,11 +10,12 @@ const CardList = styled.ul`
   background-color: #f7f7f7;
   padding: 50px;
   border-radius: 25px;
-  @media ${theme.breakpoints.tablet} {
+  margin-bottom: 50px;
+  @media ${theme.breakpoints.smallScreen} {
     padding: 25px;
     flex-direction: column;
-    gap: 15px;
-  }
+    background-color: transparent;
+
 `;
 
 function Gallery() {

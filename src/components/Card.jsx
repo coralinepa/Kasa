@@ -45,6 +45,8 @@ const Image = styled.img`
   object-position: center;
   transition: transform 0.2s ease-in-out;
   will-change: transform;
+  transform: scale(1);
+  transition-duration: 0.5s;
   &:hover {
     transform: scale(1.1);
   }

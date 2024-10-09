@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import Logo from "../assets/images/logo.png";
 import Navbar from "./NavBar";
+import theme from "../theme";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -13,12 +14,15 @@ const StyledHeader = styled.header`
   max-width: 1240px;
   width: 100%;
   padding-bottom: 20px;
+  @media ${theme.breakpoints.smallScreen} {
+    width: 90%;
+    padding-bottom: 5px;
+  }
 `;
 
 const LogoPage = styled.img`
   height: 60%;
-
-  @media screen and (max-width: 700px) {
+  @media ${theme.breakpoints.smallScreen} {
     height: 40px;
   }
 `;

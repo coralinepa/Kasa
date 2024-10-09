@@ -23,18 +23,8 @@ body {
 main {
   margin: 0 auto;
   max-width: 1240px;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-  background-color: #000;
-}
-
-@media (max-width: 768px) {
-  main {
-    padding: 2Opx;
+  @media (max-width: 1120px) {
+    max-width: 1120px;
+    padding: 20px;
   }
 }
