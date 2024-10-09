@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import datas from "../data/data";
 import Rating from "../components/Rating";
 import HostName from "../components/HostName";
@@ -8,7 +8,6 @@ import Slideshow from "../components/Slideshow";
 import Collapse from "../components/Collapse";
 import Tag from "../components/Tag";
 import theme from "../theme";
-import NotFound from "./NotFound";
 
 const ContainerAccomodation = styled.div`
   padding-top: 20px;
@@ -107,12 +106,9 @@ const ItemCollapse = styled.div`
 
 function Accomodation() {
   const { id } = useParams();
-
   const dataAccomodation = datas?.find((data) => data.id === id);
-
   if (!dataAccomodation) {
-    console.log("coucou");
-    return <NotFound />;
+    return <Navigate to="/not-found" />;
   }
 
   const {
