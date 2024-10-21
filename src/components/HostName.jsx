@@ -16,7 +16,6 @@ const Container = styled.div`
   align-items: flex-end;
 `;
 
-// Composant qui gère l'affichage du nom de l'hôte
 function Host({ name }) {
   if (!name) return null;
 
