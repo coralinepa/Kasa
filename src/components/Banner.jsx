@@ -7,32 +7,30 @@ const BannerContainer = styled.div`
     url(${(props) => props.$image});
   position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
   background-position: center;
-  background-size: cover;
   height: 223px;
   padding: 20px;
   margin-bottom: 20px;
   @media ${theme.breakpoints.smallScreen} {
     height: 120px;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
   }
 `;
 
 const Title = styled.h2`
-  color: #ffff;
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 48px;
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.weight.normal};
   box-sizing: border-box;
   @media ${theme.breakpoints.smallScreen} {
-    font-size: 24px;
-    overflow-wrap: break-word;
-    width: 218px;
+    font-size: ${({ theme }) => theme.size.title};
+    font-weight: ${({ theme }) => theme.weight.bold};
+    width: 228px;
+    word-wrap: break-word;
   }
 `;
 

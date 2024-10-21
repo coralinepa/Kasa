@@ -7,7 +7,7 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.dark};
 `;
 
 const FooterCopyright = styled.p`

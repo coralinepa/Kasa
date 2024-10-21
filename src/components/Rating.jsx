@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import theme from "../theme";
 
 const Star = styled.span`
   color: ${(props) => (props.$active ? "#FF6060" : "#E3E3E3")};
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.size.title};
   padding-right: 5px;
+  @media ${theme.breakpoints.mobile} {
+    font-size: 18px;
+  }
 `;
 
 function Rating({ rating }) {

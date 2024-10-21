@@ -42,7 +42,6 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
   transition: transform 0.2s ease-in-out;
   will-change: transform;
   transform: scale(1);
@@ -58,9 +57,9 @@ const Title = styled.h3`
   bottom: 20px;
   left: 20px;
   right: 20px;
-  font-weight: 500;
-  font-size: 18px;
-  color: #fff;
+  font-weight: ${({ theme }) => theme.weight.normal};
+  font-size: ${({ theme }) => theme.size.content};
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 function Card({ id, title, cover }) {

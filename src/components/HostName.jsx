@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import theme from "../theme";
 
 const Part = styled.span`
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.size.content};
   padding-right: 2px;
+  @media ${theme.breakpoints.mobile} {
+    font-size: ${({ theme }) => theme.size.mobile};
+  }
 `;
 
 const Container = styled.div`
@@ -12,7 +16,6 @@ const Container = styled.div`
   align-items: flex-end;
 `;
 
-// Composant qui gère l'affichage du nom de l'hôte
 function Host({ name }) {
   if (!name) return null;
 

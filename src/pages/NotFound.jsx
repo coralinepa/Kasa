@@ -21,12 +21,12 @@ const NotFoundTitle = styled.h3`
 
 const NotFoundContent = styled.div`
   font-size: 36px;
-  font-weight: 300;
+  font-weight: ${({ theme }) => theme.weight.light};
   text-align: center;
   color: ${({ theme }) => theme.colors.secondary};
 
   @media ${theme.breakpointssmallScreen} {
-    font-size: 18px;
+    font-size: ${({ theme }) => theme.size.content};
   }
 `;
 
@@ -35,6 +35,7 @@ const StyledLink = styled(Link)`
   display: block;
   width: fit-content;
   padding-bottom: 70px;
+  text-decoration: underline;
 
   &:hover::after {
     width: 100%;
@@ -48,12 +49,11 @@ const StyledLink = styled(Link)`
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: ;
     transition: width 0.2s ease-in-out;
   }
 
   @media ${theme.breakpoints.smallScreen} {
-    font-size: 18px;
+    font-size: ${({ theme }) => theme.size.content};
   }
 `;
 

@@ -9,23 +9,19 @@ import theme from "../theme";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media ${theme.breakpoints.mobile} {
-  }
 `;
 
-const Main = styled.main`
-  width: 95%;
+const Main = styled.div`
   margin: 0 auto;
   flex-grow: 1;
 `;
 
 const Card = styled.div`
-margin: 40px auto;    
-      @media ${theme.breakpoints.mobile} {{
-          margin: 20px auto;
-      }
-  `;
+  margin: 40px auto;
+  @media ${theme.breakpoints.mobile} {
+    margin: 20px auto;
+  }
+`;
 
 function About() {
   return (

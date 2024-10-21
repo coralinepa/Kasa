@@ -19,12 +19,3 @@ body {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
-
-main {
-  margin: 0 auto;
-  max-width: 1240px;
-  @media (max-width: 1120px) {
-    max-width: 1120px;
-    padding: 20px;
-  }
-}
