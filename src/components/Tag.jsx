@@ -7,10 +7,15 @@ const StyledTag = styled.span`
   border-radius: 10px;
   color: white;
   font-size: 14px;
-  padding: 5px 15px;
+  width: 365px;
+  height: 25px;
+  padding: 5px 25px;
   margin-right: 10px;
   @media ${theme.breakpoints.mobile} {
     font-size: 10px;
+    width: 84px;
+    height: 18px;
+    padding: 5px 15px;
   }
 `;
 

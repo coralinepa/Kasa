@@ -31,12 +31,12 @@ const InfosAcommodation = styled.div`
     font-size: 36px;
     font-weight: 400;
     @media ${theme.breakpoints.mobile} {
-      font-size: 18px;
+      font-size: ${({ theme }) => theme.size.content};
     }
   }
   p {
-    font-size: 18px;
-    color: #000;
+    font-size: ${({ theme }) => theme.size.content};
+    color: ${({ theme }) => theme.colors.dark};
     padding-bottom: 10px;
     @media ${theme.breakpoints.mobile} {
       font-size: 14px;

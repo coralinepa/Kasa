@@ -8,6 +8,11 @@ const theme = {
   fonts: {
     main: "Montserrat, sans serif",
   },
+  weight: {
+    light: "300",
+    normal: "500",
+    bold: "700",
+  },
   breakpoints: {
     mobile: "only screen and (max-width: 767px)",
     smallScreen: "only screen and (max-width: 1024px)",

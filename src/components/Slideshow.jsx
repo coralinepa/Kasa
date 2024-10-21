@@ -8,9 +8,6 @@ import theme from "../theme";
 
 const Carousel = styled.section`
   position: relative;
-  width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
   height: 415px;
@@ -32,7 +29,6 @@ const Slide = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   opacity: ${({ $isActive }) => ($isActive ? 1 : 0)};
   transition: opacity ease-in-out 0.6s;
 `;
@@ -41,7 +37,6 @@ const Image = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   position: absolute;
 `;
 
@@ -54,6 +49,9 @@ const Pagination = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
+  @media ${theme.breakpoints.mobile} {
+    color: transparent;
+  }
 `;
 
 const Button = styled.button`
@@ -61,7 +59,6 @@ const Button = styled.button`
   top: 50%;
   transform: translateY(-50%);
   background-color: transparent;
-  color: white;
   border: none;
   padding: 10px;
   cursor: pointer;

@@ -12,18 +12,16 @@ const StyledHeader = styled.header`
   margin: 0 auto;
   padding-top: 40px;
   max-width: 1240px;
-  width: 100%;
   padding-bottom: 20px;
   @media ${theme.breakpoints.smallScreen} {
-    width: 90%;
-    padding-bottom: 5px;
+    padding: 20px;
   }
 `;
 
 const LogoPage = styled.img`
   height: 60%;
-  @media ${theme.breakpoints.smallScreen} {
-    height: 40px;
+  @media ${theme.breakpoints.mobile} {
+    width: 145px;
   }
 `;
 

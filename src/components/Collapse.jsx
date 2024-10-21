@@ -19,12 +19,12 @@ const CollapseTitle = styled.h3`
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.primary};
   border-radius: 10px;
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: ${({ theme }) => theme.weight.normal};
+  font-size: ${({ theme }) => theme.size.title};
   padding: 10px 15px;
   cursor: pointer;
   @media ${theme.breakpoints.mobile} {
-    font-size: 13px;
+    font-size: ${({ theme }) => theme.size.titleMobile};
   }
 `;
 
@@ -41,7 +41,7 @@ const CollapseContent = styled.div`
   flex-direction: column;
   gap: 5px;
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.size.content};
   padding: ${({ open }) => (open ? "10px" : "0")};
   height: ${({ open }) => (open ? "auto" : "0")};
   visibility: ${({ open }) => (open ? "visible" : "hidden")};

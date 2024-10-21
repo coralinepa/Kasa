@@ -12,7 +12,8 @@ const CardList = styled.ul`
   border-radius: 25px;
   margin-bottom: 50px;
   @media ${theme.breakpoints.smallScreen} {
-    padding: 25px;
+    padding: 0px;
+    gap: 22px;
     flex-direction: column;
     background-color: transparent;
 
